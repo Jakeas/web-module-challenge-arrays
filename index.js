@@ -151,11 +151,11 @@ Use the removeFlavorByName function below to do the following:
 */
 
 function removeFlavorByName(arr, str){
-    for(let i=0; i<arr.length; i++){
-      const spliced = arr.splice(str) 
-      return spliced 
-    //    console.log("0")
-    } 
+    let indexed = arr.indexOf(str) 
+    console.log("1", indexed) 
+    let spliced = arr.splice(indexed, 1) 
+    console.log("2", spliced)
+        return arr
     // console.log("1", arr)
      
 }
@@ -186,15 +186,15 @@ function filterByWord(arr, str){
     const newArr = []
     for(let i=0; i< arr.length; i++){
         if(arr[i].includes(str)){
-         console.log("1", str)
+        //  console.log("1", str)
             newArr.push(arr[i])
 
-           console.log("2", newArr) 
+        //    console.log("2", newArr) 
         }  
         // console.log("2nd", newArr)    
     }; return newArr 
 } 
-console.log("final", filterByWord("chocolate"))
+// console.log("final", filterByWord("chocolate"))
 
 
 
